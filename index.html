@@ -172,6 +172,10 @@ document.addEventListener("DOMContentLoaded", function () {
           const category = this.innerText.trim(); // Obtenemos el texto del botón
           filterProjects(category);
       });
+
+      // Resaltar botón activo (opcional)
+      headerButtons.forEach((btn) => btn.classList.remove("w3-black"));
+      event.target.classList.add("w3-black");
   });
 
   function filterProjects(category) {
@@ -182,10 +186,6 @@ document.addEventListener("DOMContentLoaded", function () {
           // Mostrar todo si se selecciona "ALL", si no, filtrar por categoría
           project.style.display = (category === "ALL" || projectCategory === category) ? "block" : "none";
       });
-
-      // Resaltar botón activo (opcional)
-      headerButtons.forEach((btn) => btn.classList.remove("w3-black"));
-      event.target.classList.add("w3-black");
   }
 });
 </script>
