@@ -46,7 +46,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       <span class="w3-margin-right">Filter:</span> 
       <button class="w3-button w3-black">ALL</button>
       <button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Academic Projects</button>
-      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Game Jam Projects</button>
+      <button class="w3-button w3-white w3-hide-smal l"><i class="fa fa-photo w3-margin-right"></i>Game Jam Projects</button>
     </div>
     </div>
   </header>
@@ -152,6 +152,44 @@ function w3_close() {
     document.getElementById("myOverlay").style.display = "none";
 }
 </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Seleccionamos los botones de filtro solo dentro del header
+  const headerButtons = document.querySelectorAll("#projects .w3-section .w3-button");
+  const projects = document.querySelectorAll(".w3-third");
+
+  // Mapeamos las categorías de los proyectos
+  const categories = {
+      "Perfect Production": "Game Jam Projects",
+      "SHUT UP!": "Game Jam Projects",
+      "Los Ojos Verdes": "Game Jam Projects",
+  };
+
+  // Evento para cada botón del header
+  headerButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+          const category = this.innerText.trim(); // Obtenemos el texto del botón
+          filterProjects(category);
+      });
+  });
+
+  function filterProjects(category) {
+      projects.forEach((project) => {
+          const projectName = project.querySelector("p b").innerText.trim();
+          const projectCategory = categories[projectName] || "Other";
+
+          // Mostrar todo si se selecciona "ALL", si no, filtrar por categoría
+          project.style.display = (category === "ALL" || projectCategory === category) ? "block" : "none";
+      });
+
+      // Resaltar botón activo (opcional)
+      headerButtons.forEach((btn) => btn.classList.remove("w3-black"));
+      event.target.classList.add("w3-black");
+  }
+});
+</script>
+
 
 </body>
 </html>
