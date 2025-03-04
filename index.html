@@ -54,8 +54,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 <div class="w3-main" style="margin: auto; max-width: 1000px;">
 
   <!-- Header -->
-  <div class="w3-section w3-bottombar w3-padding-16">
-    <span class="w3-margin-right">Filter:</span> 
+  <div class="w3-section w3-bottombar w3-padding-16 filter-container">
     <button class="w3-button w3-black active-filter" onclick="filterProjects('ALL', this)">ALL</button>
     <button class="w3-button" onclick="filterProjects('Academic Projects', this)">
       <i class="fa fa-diamond w3-margin-right"></i>Academic Projects
@@ -63,7 +62,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <button class="w3-button w3-hide-small" onclick="filterProjects('Game Jam Projects', this)">
       <i class="fa fa-photo w3-margin-right"></i>Game Jam Projects
     </button>
-  </div>
+</div>
   
   <!-- First Photo Grid-->
   <div class="w3-row-padding">
