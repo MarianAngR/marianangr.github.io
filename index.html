@@ -77,7 +77,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   <div class="w3-row-padding">
     <!-- Columna uno-->
     <div class="w3-third w3-container w3-margin-bottom">
-      <img src="/Images/perfect_production_portada.png" alt="perfect Production" style="width:100%" class="w3-hover-opacity">
+      <img src="/Images/perfect_production_portada.png" alt="Perfect Production" style="width:100%" class="w3-hover-opacity">
       <div class="w3-container w3-white">
         <p><b>Perfect Production</b></p>
         <p>Perfect Production is a game developed for the Brackeys 2025.1 Game Jam, under the theme Nothing can go wrong.
@@ -133,6 +133,18 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     </div>
   </div>
 
+    <!-- Second Photo Grid-->
+    <div class="w3-row-padding">
+      <!-- Columna uno-->
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="/Images/perfect_production_portada.png" alt="A La Carte" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b>A La Carte</b></p>
+          <p>Info</p>
+          <p></p>
+        </div>  
+      </div>
+      
   <!-- About Me
   <div class="w3-container w3-padding-large" style="margin-bottom:32px">
     <h4 id="about"><b>About Me</b></h4>
@@ -176,43 +188,6 @@ function w3_close() {
 </script>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  // Seleccionamos los botones de filtro solo dentro del header
-  const headerButtons = document.querySelectorAll("#projects .w3-section .w3-button");
-  const projects = document.querySelectorAll(".w3-third");
-
-  // Mapeamos las categorías de los proyectos
-  const categories = {
-      "Perfect Production": "Game Jam Projects",
-      "SHUT UP!": "Game Jam Projects",
-      "Los Ojos Verdes": "Game Jam Projects",
-  };
-
-  // Evento para cada botón del header
-  headerButtons.forEach((button) => {
-      button.addEventListener("click", function () {
-          const category = this.innerText.trim(); // Obtenemos el texto del botón
-          filterProjects(category);
-      });
-  });
-
-  function filterProjects(category) {
-      projects.forEach((project) => {
-          const projectName = project.querySelector("p b").innerText.trim();
-          const projectCategory = categories[projectName] || "Other";
-
-          // Mostrar todo si se selecciona "ALL", si no, filtrar por categoría
-          project.style.display = (category === "ALL" || projectCategory === category) ? "block" : "none";
-      });
-      
-      // Resaltar botón activo (opcional)
-      headerButtons.forEach((btn) => btn.classList.remove("w3-black"));
-      event.target.classList.add("w3-black");
-  }
-});
-</script>
-
-<script>
   document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll(".w3-section .w3-button");
     const projects = document.querySelectorAll(".w3-third");
@@ -221,6 +196,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Perfect Production": "Game Jam Projects",
         "SHUT UP!": "Game Jam Projects",
         "Los Ojos Verdes": "Game Jam Projects",
+        "A La Carte": "Academic Projects"
     };
   
     window.filterProjects = function (category, clickedButton) {
