@@ -32,8 +32,29 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       gap: 15px; /* Agrega espacio entre botones */
       flex-wrap: wrap; /* Permite que se acomoden bien en pantallas pequeñas */
   }
+
+  nav.w3-bar {
+  display: flex;
+  align-items: center; /* Alinea verticalmente */
+  justify-content: space-between; /* Distribuye los elementos */
+  padding: 10px 20px; /* Espaciado interno */
+}
+
+.filtro-container {
+  display: flex;
+  gap: 15px; /* Espacio entre botones */
+  margin-left: auto; /* Mueve los filtros a la derecha */
+}
+
+.filtro-container .w3-button {
+  padding: 8px 15px; /* Ajusta el tamaño de los botones */
+}
+
 </style>
+
+
 </head>
+
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
 <!-- Navbar superior -->
@@ -51,12 +72,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     </a>
   </div>
 
-  <div style="margin-left: auto; display: flex; gap: 10px;">
+  <!-- Botones de login y signup -->
+  <div class="filtro-container">
     <button class="w3-button w3-hover-grey">Login</button>
     <button class="w3-button w3-green w3-hover-light-green">Sign Up</button>
   </div>
-
 </nav>
+
 
 <!-- Agregar un margen superior al contenido para evitar que quede oculto bajo la barra -->
 <div style="margin-top:60px;"></div>
