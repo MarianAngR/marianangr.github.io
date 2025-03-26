@@ -1,0 +1,70 @@
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway", sans-serif;
+}
+
+.w3-button {
+    background-color: white !important;
+    color: black;
+    border: 1px solid #ddd;
+}
+
+.w3-button.active-filter {
+    background-color: #66bb90 !important;
+    color: white;
+}
+
+.filtro-container {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+}
+
+.btn-download {
+    background-color: black !important;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.project-image {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.btn-play {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #66bb90;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center; /* Centra los botones */
+    gap: 15px; /* Agrega espacio entre botones */
+    flex-wrap: wrap; /* Permite que se acomoden bien en pantallas pequeñas */
+}
+
+nav.w3-bar {
+display: flex;
+align-items: center; /* Alinea verticalmente */
+justify-content: space-between; /* Distribuye los elementos */
+padding: 10px 20px; /* Espaciado interno */
+}
+
+.filtro-container {
+display: flex;
+gap: 15px; /* Espacio entre botones */
+margin-left: auto; /* Mueve los filtros a la derecha */
+}
+
+.filtro-container .w3-button {
+padding: 8px 15px; /* Ajusta el tamaño de los botones */
+}
