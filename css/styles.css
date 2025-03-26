@@ -71,6 +71,7 @@ padding: 8px 15px; /* Ajusta el tamaño de los botones */
 
 .w3-third img {
     width: 100%;
-    aspect-ratio: 16 / 9; /* Ajusta la proporción según necesites */
-    object-fit: contain; /* La imagen se ajusta dentro del espacio sin recortarse */
+    height: 250px; /* Puedes ajustar esta altura según necesites */
+    object-fit: cover; /* Recorta la imagen manteniendo la proporción */
+    display: block;
 }
