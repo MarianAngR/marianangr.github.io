@@ -8,7 +8,7 @@ body, h1, h2, h3, h4, h5, h6 {
     border: 1px solid #000000;
 }
 
-.w3-button.active-filter {
+.active-filter {
     background-color: #66bb90 !important;
     color: white;
 }
@@ -67,4 +67,10 @@ margin-left: auto; /* Mueve los filtros a la derecha */
 
 .filtro-container .w3-button {
 padding: 8px 15px; /* Ajusta el tamaño de los botones */
+}
+
+.w3-third img {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Ajusta la proporción según necesites */
+    object-fit: contain; /* La imagen se ajusta dentro del espacio sin recortarse */
 }
