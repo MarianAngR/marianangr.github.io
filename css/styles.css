@@ -68,9 +68,3 @@ margin-left: auto; /* Mueve los filtros a la derecha */
 .filtro-container .w3-button {
 padding: 8px 15px; /* Ajusta el tamaño de los botones */
 }
-
-.w3-third img {
-    width: 100%;
-    object-fit: cover; /* Recorta la imagen manteniendo la proporción */
-    display: block;
-}
