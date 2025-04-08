@@ -12,13 +12,38 @@
 
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
-  <!-- Navbar -->
-  <nav class="w3-bar w3-white w3-top w3-padding w3-card">
-    <a href="../index.html" class="w3-bar-item w3-button w3-hover-text-grey"><i class="fa fa-arrow-left"></i> Back</a>
-    <span class="w3-bar-item w3-text-black w3-large"><b>Á La Carte</b></span>
+<!-- Navbar superior -->
+<nav class="w3-bar w3-white w3-top w3-padding w3-card">
+    <!-- Nombre en lugar del logo -->
+    <span class="w3-bar-item w3-text-black w3-large"><b>Marian Angulo</b></span>
+    
+    <!-- Contenedor de los botones centrados -->
+    <div style="display: flex; gap: 20px; justify-content: center; flex-grow: 1;">
+      <a href="#projects" class="w3-bar-item w3-button w3-hover-text-grey">
+        <i class="fa fa-th-large" style="color: #66bb90;"></i> Projects
+      </a>
+      <a href="#contact" class="w3-bar-item w3-button w3-hover-text-grey">
+        <i class="fa fa-user" style="color: #66bb90;"></i> Contact
+      </a>
+    </div>
+  
+    <!-- Botones de LinkedIn y CV -->
+    <div class="filtro-container">
+      <!-- Botón de LinkedIn -->
+      <a href="https://www.linkedin.com/in/marian-angulo-b16413236" target="_blank" class="w3-button linkedin-btn">
+        <i class="fa fa-linkedin"></i>
+      </a>
+  
+      <!-- Botón de CV -->
+      <a href="docs/CV - Marian Angulo.pdf" download="CV - Marian Angulo.pdf" class="w3-button" 
+        style="background-color: black !important; color: white !important; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block;">
+        <i class="fa fa-download"></i> Download CV
+      </a>
+    </div>
   </nav>
-
-  <div style="margin-top:80px;"></div>
+  
+  <!-- Agregar un margen superior al contenido para evitar que quede oculto bajo la barra -->
+  <div style="margin-top:60px;"></div>
 
   <!-- Main content -->
   <div class="w3-container" style="max-width: 1000px; margin: auto;">
