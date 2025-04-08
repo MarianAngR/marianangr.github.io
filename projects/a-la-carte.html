@@ -1,72 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Á La Carte – Marian Angulo</title>
-  <link rel="stylesheet" href="../css/styles.css">
+  <title>Á La Carte - Marian Angulo/title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
 <!-- Navbar superior -->
 <nav class="w3-bar w3-white w3-top w3-padding w3-card">
-    <!-- Nombre en lugar del logo -->
-    <span class="w3-bar-item w3-text-black w3-large"><b>Marian Angulo</b></span>
-    
-    <!-- Contenedor de los botones centrados -->
-    <div style="display: flex; gap: 20px; justify-content: center; flex-grow: 1;">
-      <a href="#projects" class="w3-bar-item w3-button w3-hover-text-grey">
-        <i class="fa fa-th-large" style="color: #66bb90;"></i> Projects
-      </a>
-      <a href="#contact" class="w3-bar-item w3-button w3-hover-text-grey">
-        <i class="fa fa-user" style="color: #66bb90;"></i> Contact
-      </a>
-    </div>
+  <!-- Nombre en lugar del logo -->
+  <span class="w3-bar-item w3-text-black w3-large"><b>Marian Angulo</b></span>
   
-    <!-- Botones de LinkedIn y CV -->
-    <div class="filtro-container">
-      <!-- Botón de LinkedIn -->
-      <a href="https://www.linkedin.com/in/marian-angulo-b16413236" target="_blank" class="w3-button linkedin-btn">
-        <i class="fa fa-linkedin"></i>
-      </a>
-  
-      <!-- Botón de CV -->
-      <a href="docs/CV - Marian Angulo.pdf" download="CV - Marian Angulo.pdf" class="w3-button" 
-        style="background-color: black !important; color: white !important; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block;">
-        <i class="fa fa-download"></i> Download CV
-      </a>
-    </div>
-  </nav>
-  
-  <!-- Agregar un margen superior al contenido para evitar que quede oculto bajo la barra -->
-  <div style="margin-top:60px;"></div>
-
-  <!-- Main content -->
-  <div class="w3-container" style="max-width: 1000px; margin: auto;">
-    <img src="/Images/a_la_carte_portada.jpg" style="width:100%; border-radius: 10px;" alt="A La Carte">
-
-    <h2 class="w3-text-black" style="margin-top: 30px;">Project Overview</h2>
-    <p>"Á La Carte" is a 2D video game developed in Unity as part of a group project for my Master's Degree in Game Design at the Universidad Europea de Madrid. 
-    The game is a mix of deckbuilder, cooking simulator, and roguelike, where the player manages a restaurant while dealing with kitchen shifts and customers.</p>
-
-    <h3>My Role</h3>
-    <p>In this project, I was in charge of the game design, UI mockups and balancing the cards/ingredients system.</p>
-
-    <h3>Screenshots</h3>
-    <img src="/Images/a_la_carte_screenshot1.jpg" style="width:100%; margin-bottom: 20px;" alt="Screenshot 1">
-    <img src="/Images/a_la_carte_screenshot2.jpg" style="width:100%; margin-bottom: 20px;" alt="Screenshot 2">
-
-    <h3>Try it</h3>
-    <a href="https://tulink.itch.io/a-la-carte" target="_blank">
-      <button class="w3-button" style="background-color: #66bb90; color: white; padding: 10px 20px; border-radius: 5px;">
-        Play on Itch.io
-      </button>
+  <!-- Contenedor de los botones centrados -->
+  <div style="display: flex; gap: 20px; justify-content: center; flex-grow: 1;">
+    <a href="#projects" class="w3-bar-item w3-button w3-hover-text-grey">
+      <i class="fa fa-th-large" style="color: #66bb90;"></i> Projects
+    </a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hover-text-grey">
+      <i class="fa fa-user" style="color: #66bb90;"></i> Contact
     </a>
   </div>
+
+  <!-- Botones de LinkedIn y CV -->
+  <div class="filtro-container">
+    <!-- Botón de LinkedIn -->
+    <a href="https://www.linkedin.com/in/marian-angulo-b16413236" target="_blank" class="w3-button linkedin-btn">
+      <i class="fa fa-linkedin"></i>
+    </a>
+
+    <!-- Botón de CV -->
+    <a href="docs/CV - Marian Angulo.pdf" download="CV - Marian Angulo.pdf" class="w3-button" 
+      style="background-color: black !important; color: white !important; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block;">
+      <i class="fa fa-download"></i> Download CV
+    </a>
+  </div>
+</nav>
+
+<!-- Agregar un margen superior al contenido para evitar que quede oculto bajo la barra -->
+<div style="margin-top:60px;"></div>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin: auto; max-width: 1000px;">
+
+  <!-- Header -->
+  <div class="w3-section w3-bottombar w3-padding-16 filter-container">
+    <button class="w3-button active-filter" onclick="filterProjects('ALL', this)">ALL</button>
+    <button class="w3-button" onclick="filterProjects('Academic Projects', this)">
+      <i class="fa fa-diamond w3-margin-right"></i>Academic Projects
+    </button>
+    <button class="w3-button" onclick="filterProjects('Game Jam Projects', this)">
+      <i class="fa fa-photo w3-margin-right"></i>Game Jam Projects
+    </button>
+  </div>
+  
+</div>
+
+<script src="js/scripts.js"></script> <!-- Archivo externo de scripts -->
 
 </body>
 </html>
