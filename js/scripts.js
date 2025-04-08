@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Perfect Production": "Game Jam Projects",
         "SHUT UP!": "Game Jam Projects",
         "Los Ojos Verdes": "Game Jam Projects",
-        "A La Carte": "Academic Projects"
+        "Á La Carte": "Academic Projects"
     };
 
     window.filterProjects = function (category, clickedButton) {
@@ -20,3 +20,14 @@ document.addEventListener("DOMContentLoaded", function () {
         clickedButton.classList.add("active-filter");
     };
 });
+
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
