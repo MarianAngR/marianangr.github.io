@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Perfect Production": "Game Jam Projects",
         "SHUT UP!": "Game Jam Projects",
         "Los Ojos Verdes": "Game Jam Projects",
-        "Á La Carte": "Academic Projects"
+        "A La Carte": "Academic Projects"
     };
 
     window.filterProjects = function (category, clickedButton) {
